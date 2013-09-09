@@ -76,5 +76,8 @@ create_asset_plugin
 # Store new artifacts in cache.
 for dir in $CACHED_DIRS; do
   rm -rf $CACHE_DIR/$dir
-  cp -R $dir $CACHE_DIR/
+  if [ -d $dir] then
+  do
+    cp -R $dir $CACHE_DIR/
+  done
 done
